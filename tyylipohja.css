@@ -1,0 +1,56 @@
+/* Resetoidaan selaimen oletustyylit */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Perusfontti ja taustaväri */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Vaaleanharmaa taustaväri */
+  color: #333; /* Tummanharmaa tekstiväri */
+}
+
+/* Yläpalkki */
+header {
+  background-color: #333; /* Tummanharmaa taustaväri */
+  color: #fff; /* Valkoinen tekstiväri */
+  padding: 10px; /* Pieni sisennys */
+}
+
+/* Linkkien perustyyli */
+a {
+  color: #0077cc; /* Sininen tekstiväri */
+  text-decoration: none; /* Poistetaan alleviivaukset */
+}
+
+/* Linkkien hover-tila */
+a:hover {
+  text-decoration: underline; /* Lisätään alleviivaus hover-tilassa */
+}
+
+/* Otsikot */
+h1, h2, h3 {
+  color: #333; /* Tummanharmaa tekstiväri */
+}
+
+/* Kappaleiden sisennys */
+p {
+  margin-bottom: 20px;
+}
+
+/* Container-div */
+.container {
+  width: 80%; /* Leveys 80% näytöstä */
+  margin: 0 auto; /* Keskitetään sivu näytölle */
+}
+
+/* Footer-alue */
+footer {
+  background-color: #333; /* Tummanharmaa taustaväri */
+  color: #fff; /* Valkoinen tekstiväri */
+  padding: 10px; /* Pieni sisennys */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
