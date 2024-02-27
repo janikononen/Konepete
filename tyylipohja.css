@@ -7,26 +7,30 @@ body, h1, p {
 /* Perusfontti ja taustaväri */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* Vaaleanharmaa taustaväri */
-  color: #333; /* Tummanharmaa tekstiväri */
+  background-color:#f9f9fA; /* Vaaleanharmaa taustaväri */
+  color:#28282f; /* Tummanharmaa tekstiväri */
 }
 
 /* Yläpalkki */
 header {
-  background-color: #333; /* Tummanharmaa taustaväri */
-  color: #fff; /* Valkoinen tekstiväri */
+  background:#ffc000; /* Oranssi taustaväri */
+  color:#28282f; /* musta tekstiväri */
   padding: 10px; /* Pieni sisennys */
 }
 
 /* Linkkien perustyyli */
 a {
-  color: #0077cc; /* Sininen tekstiväri */
+  color: #28282f; /* Sininen tekstiväri */
   text-decoration: none; /* Poistetaan alleviivaukset */
 }
 
 /* Linkkien hover-tila */
 a:hover {
-  text-decoration: underline; /* Lisätään alleviivaus hover-tilassa */
+  text-decoration: underline; /* Lisätään alleviivaus hover-tilassa */  
+}
+
+a:visited {
+    color:#28282f;
 }
 
 /* Otsikot */
