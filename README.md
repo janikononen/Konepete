@@ -1,2 +1,0 @@
-# Konepete
-Digitalisaation koulutyö (nettisivu)
