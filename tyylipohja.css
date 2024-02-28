@@ -1,8 +1,7 @@
 /*määritellään listausten tyylit*/
 ul {
-list-style-type: none;
-justify-content: space-between;
-text-align: center;
+
+  list-style-type: none;
 
 }
 li {
@@ -26,10 +25,25 @@ body {
 
 /* Yläpalkki */
 header {
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  z-index: 100;
   background:#ffc000; /* Oranssi taustaväri */
   color:#28282f; /* musta tekstiväri */
-  padding: 10px; /* Pieni sisennys */
+}
+.navbar a {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  margin-right: 100px;
+  
 }
 
 /* Linkkien perustyyli */
