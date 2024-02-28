@@ -1,3 +1,16 @@
+/*määritellään listausten tyylit*/
+ul {
+list-style-type: none;
+justify-content: space-between;
+text-align: center;
+
+}
+li {
+  display: inline-block;
+
+}
+
+
 /* Resetoidaan selaimen oletustyylit */
 body, h1, p {
   margin: 0;
@@ -13,6 +26,7 @@ body {
 
 /* Yläpalkki */
 header {
+
   background:#ffc000; /* Oranssi taustaväri */
   color:#28282f; /* musta tekstiväri */
   padding: 10px; /* Pieni sisennys */
