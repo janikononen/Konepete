@@ -8,8 +8,6 @@ ul {
   position: fixed;
   width: 100%;
   top: 0%;
-  position: -webkit-sticky;
-  position: sticky;
   
 }
 
@@ -17,19 +15,23 @@ li {
   float:right;
 }
 
-li a {
+a {
   display: block;
   color:#28282f;
   text-align: center;
   padding: 20px 30px;
   text-decoration: none;
+  transition: 0.5s;
+  
 }
 
-li a:hover {
-  background-color: #d8af34;
+.active {
+  background-color:#ffc000;
 }
+
+/*määritellään hover-tila*/
 li a:hover:not(.active) {
-  background-color: #ffc000;
+  background-color:#cfa320;
 }
 
 /* Resetoidaan selaimen oletustyylit */
