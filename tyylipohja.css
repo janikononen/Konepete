@@ -1,13 +1,36 @@
 /*määritellään listausten tyylit*/
 ul {
-
   list-style-type: none;
-
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffc000;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  position: -webkit-sticky;
+  position: sticky;
+  
 }
+
 li {
-  display: inline-block;
+  float:right;
 }
 
+li a {
+  display: block;
+  color:#28282f;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #d8af34;
+}
+li a:hover:not(.active) {
+  background-color: #ffc000;
+}
 
 /* Resetoidaan selaimen oletustyylit */
 body, h1, p {
@@ -22,39 +45,12 @@ body {
   color:#28282f; /* Tummanharmaa tekstiväri */
 }
 
-/* Yläpalkki */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px 0px;
-  display: flex;
-  align-items: center;
-  justify-content:space-between;
-  z-index: 100;
-  background:#ffc000; /* Oranssi taustaväri */
-  color:#28282f; /* musta tekstiväri */
-}
-.navbar a {
-  font-size: 18px;
-  font-weight:550;
-  text-decoration: none;
-  margin-left: 200px;
-  margin-right: 400px;
-  
-}
-
 /* Linkkien perustyyli */
 a {
-  color: #28282f; /* Sininen tekstiväri */
+  color: #28282f; /* musta tekstiväri */
   text-decoration: none; /* Poistetaan alleviivaukset */
 }
 
-/* Linkkien hover-tila */
-a:hover {
-  text-decoration: underline; /* Lisätään alleviivaus hover-tilassa */  
-}
 
 a:visited {
     color:#28282f;
