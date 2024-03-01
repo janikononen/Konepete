@@ -46,10 +46,11 @@ a.otsikot {
   padding: 42px 280px;
   text-decoration: none;
   font-size: 30px;
+  transition: 0.5s;
 }
 
 /*määritellään että "active" tilassa oleva valikkoa ei voi hoveroida */
-li a:hover:not(.active, .logo) {
+li a:hover:not(.logo) {
   background-color:#cfa320;
 }
 
@@ -97,7 +98,7 @@ p {
 footer {
   background-color: #333; /* Tummanharmaa taustaväri */
   color: #fff; /* Valkoinen tekstiväri */
-  padding: 10px; /* Pieni sisennys */
+  padding: 20px; /* Pieni sisennys */
   position: fixed;
   bottom: 0;
   width: 100%;
