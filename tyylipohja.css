@@ -1,5 +1,5 @@
 /*määritellään listausten tyylit*/
-ul {
+ul.valikko {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -8,29 +8,48 @@ ul {
   position: fixed;
   width: 100%;
   top: 0%;
-  
-}
-
-li {
-  float:right;
-}
-
-a {
-  display: block;
-  color:#28282f;
   text-align: center;
-  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between
+
+}
+/*määritellään logon asetukset*/
+.logo {
+  display: block;
+  text-align: center;
+  padding: 15px 50px;
+  text-decoration: none;
+  color: #ffc000;
+  background-color: #28282f;
+  font-weight: 550;
+  font-size: 50px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+a.otsikot {
+  display: block;
+  text-align: center;
+  padding: 42px 280px;
   text-decoration: none;
   transition: 0.5s;
+  font-size: 30px;
   
 }
-
+/*määritellän aktiivisena olevan sivuston yläpalkin väri*/
 .active {
-  background-color:#ffc000;
+  background-color:#e4ab01;
+  display: block;
+  text-align: center;
+  padding: 42px 280px;
+  text-decoration: none;
+  font-size: 30px;
 }
 
-/*määritellään hover-tila*/
-li a:hover:not(.active) {
+/*määritellään että "active" tilassa oleva valikkoa ei voi hoveroida */
+li a:hover:not(.active, .logo) {
   background-color:#cfa320;
 }
 
