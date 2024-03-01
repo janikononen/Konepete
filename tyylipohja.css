@@ -1,13 +1,57 @@
 /*määritellään listausten tyylit*/
-ul {
-
+ul.valikko {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffc000;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between
 
 }
-li {
-  display: inline-block;
+/*määritellään logon asetukset*/
+.logo {
+  display: block;
+  text-align: center;
+  padding: 15px 50px;
+  text-decoration: none;
+  color: #ffc000;
+  background-color: #28282f;
+  font-weight: 550;
+  font-size: 50px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
 }
 
+a.otsikot {
+  display: block;
+  text-align: center;
+  padding: 42px 280px;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 30px;
+  
+}
+/*määritellän aktiivisena olevan sivuston yläpalkin väri*/
+.active {
+  background-color:#e4ab01;
+  display: block;
+  text-align: center;
+  padding: 42px 280px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/*määritellään että "active" tilassa oleva valikkoa ei voi hoveroida */
+li a:hover:not(.active, .logo) {
+  background-color:#cfa320;
+}
 
 /* Resetoidaan selaimen oletustyylit */
 body, h1, p {
@@ -22,39 +66,12 @@ body {
   color:#28282f; /* Tummanharmaa tekstiväri */
 }
 
-/* Yläpalkki */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px 0px;
-  display: flex;
-  align-items: center;
-  justify-content:space-between;
-  z-index: 100;
-  background:#ffc000; /* Oranssi taustaväri */
-  color:#28282f; /* musta tekstiväri */
-}
-.navbar a {
-  font-size: 18px;
-  font-weight:550;
-  text-decoration: none;
-  margin-left: 200px;
-  margin-right: 400px;
-  
-}
-
 /* Linkkien perustyyli */
 a {
-  color: #28282f; /* Sininen tekstiväri */
+  color: #28282f; /* musta tekstiväri */
   text-decoration: none; /* Poistetaan alleviivaukset */
 }
 
-/* Linkkien hover-tila */
-a:hover {
-  text-decoration: underline; /* Lisätään alleviivaus hover-tilassa */  
-}
 
 a:visited {
     color:#28282f;
