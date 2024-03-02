@@ -17,12 +17,12 @@ ul.valikko {
 .logo {
   display: block;
   text-align: center;
-  padding: 15px 50px;
+  padding: 10px 30px;
   text-decoration: none;
   color: #ffc000;
   background-color: #28282f;
   font-weight: 550;
-  font-size: 50px;
+  font-size: 20px;
   margin-top: 15px;
   margin-left: 15px;
   margin-bottom: 15px;
@@ -32,7 +32,7 @@ ul.valikko {
 a.otsikot {
   display: block;
   text-align: center;
-  padding: 42px 280px;
+  padding: 20px 93px;
   text-decoration: none;
   transition: 0.5s;
   font-size: 30px;
@@ -43,7 +43,7 @@ a.otsikot {
   background-color:#e4ab01;
   display: block;
   text-align: center;
-  padding: 42px 280px;
+  padding: 20px 90px;
   text-decoration: none;
   font-size: 30px;
   transition: 0.5s;
@@ -98,7 +98,7 @@ p {
 footer {
   background-color: #333; /* Tummanharmaa taustaväri */
   color: #fff; /* Valkoinen tekstiväri */
-  padding: 20px; /* Pieni sisennys */
+  padding: 10px; /* Pieni sisennys */
   position: fixed;
   bottom: 0;
   width: 100%;
