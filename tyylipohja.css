@@ -9,6 +9,9 @@ ul.valikko:not(.logo) {
   top: 0%;
   display: flex;
   width: 100%;
+  position: -webkit-sticky; /*safari*/
+  position: sticky;
+  top: 0;
 }
 
 ul.valikko li{
@@ -33,11 +36,13 @@ ul.valikko li a:not(.logo) {
   font-weight: 550;
   font-size: 20px;
   margin-top: 15px;
-  margin-left: 15px;
+  margin-left: 50px;
   margin-bottom: 15px;
-  margin-right: 15px;
+  margin-right: 50px;
   padding: 12px 10px;
   text-align: center;
+  max-width: 150px;
+  min-width: 149px;
 }
 
   
@@ -69,13 +74,13 @@ body {
 }
 
 /* Linkkien perustyyli */
-a {
+li a {
   color: #28282f; /* musta tekstiväri */
   text-decoration: none; /* Poistetaan alleviivaukset */
 }
 
 
-a:visited {
+a:visited:not(.vasen-laita) {
     color:#28282f;
 }
 
@@ -89,18 +94,67 @@ p {
   margin-bottom: 20px;
 }
 
-/* Container-div */
-.container {
-  width: 80%; /* Leveys 80% näytöstä */
-  margin: 0 auto; /* Keskitetään sivu näytölle */
-}
 
 /* Footer-alue */
 footer {
   background-color: #333; /* Tummanharmaa taustaväri */
-  color: #fff; /* Valkoinen tekstiväri */
+  color: #ffffff5e; /* Valkoinen tekstiväri */
   padding: 10px; /* Pieni sisennys */
   position: fixed;
   bottom: 0;
   width: 100%;
 }
+
+
+.keskitetty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* Tämä kasvattaa keskitettyä osaa täyttämään käytettävissä olevan tilan */
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.otsikko {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffc000;
+  margin-top: 20px;
+  width: auto;
+  border-radius: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+
+}
+
+.laatikko-container {
+  display: flex;
+  flex-wrap: wrap; /* Tämä antaa laatikoille mahdollisuuden siirtyä seuraavalle riville, kun tarpeen */
+}
+
+.laatikko {
+  flex: 1; /* Tämä tekee laatikosta joustavan, jotta se täyttää käytettävissä olevan tilan tasaisesti */
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .laatikko {
+      flex: 100%; /* Koko leveys pystyasennossa */
+  }
+}
+
+
+
