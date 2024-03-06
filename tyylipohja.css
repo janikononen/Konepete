@@ -12,7 +12,9 @@ ul.valikko:not(.logo) {
   position: -webkit-sticky; /*safari*/
   position: sticky;
   top: 0;
+  
 }
+
 
 ul.valikko li{
   flex: 1;
@@ -144,15 +146,23 @@ footer {
 
 .laatikko {
   flex: 1; /* Tämä tekee laatikosta joustavan, jotta se täyttää käytettävissä olevan tilan tasaisesti */
-  margin: 10px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   text-align: center;
+  
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .laatikko {
       flex: 100%; /* Koko leveys pystyasennossa */
+  }
+  ul.valikko:not(.logo){
+    flex-direction: column; /* muutetaan suuntaa listauksen suuntaa näytönkoon ollessa alle 1100px */
+
   }
 }
 
