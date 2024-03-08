@@ -6,7 +6,7 @@ ul.valikko:not(.logo) {
   overflow: hidden;
   background-color: #ffc000;
   position: fixed;
-  top: 0%;
+  margin-top: 0%;
   display: flex;
   width: 100%;
   position: -webkit-sticky; /*safari*/
@@ -73,6 +73,7 @@ body {
   font-family: Arial, sans-serif;
   background-color:#f9f9fA; /* Vaaleanharmaa taustaväri */
   color:#28282f; /* Tummanharmaa tekstiväri */
+  height: 100vh;
 }
 
 /* Linkkien perustyyli */
@@ -133,7 +134,7 @@ footer {
   background-color: #ffc000;
   margin-top: 20px;
   width: auto;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-left: 30%;
   margin-right: 30%;
 
@@ -149,7 +150,7 @@ footer {
   margin-bottom: 20px;
   margin-left: 30px;
   margin-right: 30px;
-  margin-top: 20px;
+  margin-top: 100px;
   padding: 20px;
   border: 1px solid #ccc;
   text-align: center;
@@ -159,6 +160,7 @@ footer {
 @media (max-width: 1100px) {
   .laatikko {
       flex: 100%; /* Koko leveys pystyasennossa */
+      margin-top: 20px;
   }
   ul.valikko:not(.logo){
     flex-direction: column; /* muutetaan suuntaa listauksen suuntaa näytönkoon ollessa alle 1100px */
@@ -166,5 +168,52 @@ footer {
   }
 }
 
+a.btn{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 4;
+  font-size: 18px;
+  font-weight: bold;
+  background: #ffc000;
+  width: 160px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#28282f;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  -webkit-transform-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.btn:hover, .btn:focus, .btn:active{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+
+}
+.pic{
+  display: flex;
+  flex-wrap: wrap;
+  margin:auto;
+  padding: 10% 10%;
 
 
+
+}
+.kuvalaatikko {
+  flex: 1; /* Tämä tekee laatikosta joustavan, jotta se täyttää käytettävissä olevan tilan tasaisesti */
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.kuvalaatikko a.btn{
+  line-height: 7;
+}
