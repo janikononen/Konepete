@@ -1,245 +1,252 @@
-/*määritellään listausten tyylit*/
+/* Määritellään listaukset yläpalkissa */
 ul.valikko:not(.logo) {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #ffc000;
-  position: fixed;
-  margin-top: 0%;
-  display: flex;
-  width: 100%;
-  position: -webkit-sticky; /*safari*/
-  position: sticky;
-  top: 0;
-  
+  list-style-type: none;         /* Poistetaan listatyyli */
+  margin: 0;                     /* Nollataan ul-elementin marginaalit */
+  padding: 0;                    /* Nollataan ul-elementin padding */
+  overflow: hidden;              /* Piilotetaan mahdolliset overflowit */
+  background-color: #ffc000;     /* Taustaväri */
+  position: fixed;               /* Kiinnitetään elementti näytön reunaan */
+  margin-top: 0%;                /* Nollataan mahdollinen ylämarginaali */
+  display: flex;                 /* Käytetään flexbox-mallia */
+  width: 100%;                   /* Elementin leveys 100% näytöstä */
+  position: -webkit-sticky;      /* Safari-yhteensopivuus */
+  position: sticky;              /* Elementti pysyy kiinnitettynä scrollatessa */
+  top: 0;                        /* Kiinnitetään elementti näytön yläreunaan */
 }
 
-
-ul.valikko li{
+/* Asetetaan jokainen listaelementti yhtä suureksi osaksi leveää palkkia */
+ul.valikko li {
   flex: 1;
 }
 
+/* Määritellään linkkien tyyli yläpalkissa, pois lukien logo */
 ul.valikko li a:not(.logo) {
-  display: block;
-  text-align: center;
-  padding: 25px 0px;
-  text-decoration: none;
-  transition: 0.5s;
-  font-size: 25px;
-
+  display: block;                /* Asetetaan linkit lohkoiksi */
+  text-align: center;            /* Keskitetään tekstit vaakasuunnassa */
+  padding: 25px 0px;              /* Asetetaan ylä- ja alamarginaali */
+  text-decoration: none;         /* Poistetaan alleviivaukset */
+  transition: 0.5s;              /* Lisätään 0.5s siirtymäefekti */
+  font-size: 25px;               /* Asetetaan fonttikoko */
 }
-/*määritellään logon asetukset*/
+
+/* Määritellään logon tyyli */
 .logo {
-  display: block;
-  text-decoration: none;
-  color: #ffc000;
-  background-color: #28282f;
-  font-weight: 550;
-  font-size: 20px;
-  margin-top: 15px;
-  margin-left: 50px;
-  margin-bottom: 15px;
-  margin-right: 50px;
-  padding: 12px 10px;
-  text-align: center;
-  max-width: 150px;
-  min-width: 149px;
+  display: block;                /* Asetetaan lohkoelementiksi */
+  text-decoration: none;         /* Poistetaan alleviivaukset */
+  color: #ffc000;                /* Tekstiväri */
+  background-color: #28282f;     /* Taustaväri */
+  font-weight: 550;              /* Asetetaan fontin paksuus */
+  font-size: 20px;               /* Asetetaan fonttikoko */
+  margin-top: 15px;              /* Ylämarginaali */
+  margin-left: 50px;             /* Vasen marginaali */
+  margin-bottom: 15px;           /* Alamarginaali */
+  margin-right: 50px;            /* Oikea marginaali */
+  padding: 12px 10px;            /* Sisäiset marginaalit */
+  text-align: center;            /* Keskitetään teksti vaakasuunnassa */
+  max-width: 150px;              /* Maksimileveys */
+  min-width: 149px;              /* Minimileveys */
 }
 
-  
-/*määritellän aktiivisena olevan sivuston yläpalkin väri*/
+/* Määritellään aktiivisen sivun yläpalkin väri */
 .active {
-  background-color:#e4ab01;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  transition: 0.5s;
+  background-color: #e4ab01;     /* Taustaväri */
+  display: block;                /* Asetetaan lohkoelementiksi */
+  text-align: center;            /* Keskitetään teksti vaakasuunnassa */
+  text-decoration: none;         /* Poistetaan alleviivaukset */
+  transition: 0.5s;              /* Lisätään 0.5s siirtymäefekti */
 }
 
-/*määritellään että "active" tilassa oleva valikkoa ei voi hoveroida */
+/* Määritellään, että "active" tilassa olevaa linkkiä ei voi hoveroida */
 li a:hover:not(.logo) {
-  background-color:#cfa320;
+  background-color: #cfa320;      /* Taustaväri hover-tilassa */
 }
 
 /* Resetoidaan selaimen oletustyylit */
 body, h1, p {
-  margin: 0;
-  padding: 0;
+  margin: 0;                      /* Nollataan marginaalit */
+  padding: 0;                     /* Nollataan padding */
 }
 
 /* Perusfontti ja taustaväri */
 body {
-  font-family: Arial, sans-serif;
-  background-color:#f9f9fA; /* Vaaleanharmaa taustaväri */
-  color:#28282f; /* Tummanharmaa tekstiväri */
-  height: 100vh;
+  font-family: Arial, sans-serif; /* Asetetaan fontti */
+  background-color: #f9f9fA;      /* Taustaväri */
+  color: #28282f;                 /* Tekstiväri */
+  height: 100vh;                  /* 100% näytön korkeudesta */
 }
 
 /* Linkkien perustyyli */
 li a {
-  color: #28282f; /* musta tekstiväri */
-  text-decoration: none; /* Poistetaan alleviivaukset */
+  color: #28282f;                 /* Tekstiväri */
+  text-decoration: none;          /* Poistetaan alleviivaukset */
 }
 
-
+/* Vierailtu linkin tyyli */
 a:visited:not(.vasen-laita) {
-    color:#28282f;
+  color: #28282f;                 /* Tekstiväri */
 }
 
 /* Otsikot */
 h1, h2, h3 {
-  color: #333; /* Tummanharmaa tekstiväri */
+  color: #333;                    /* Tekstiväri */
 }
 
 /* Kappaleiden sisennys */
 p {
-  margin-bottom: 20px;
+  margin-bottom: 20px;            /* Alamarginaali */
 }
 
-
-/* Footer-alue */
+/* Footer-alueen tyyli */
 footer {
-  background-color: #333; /* Tummanharmaa taustaväri */
-  color: #ffffff5e; /* Valkoinen tekstiväri */
-  padding: 10px; /* Pieni sisennys */
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  background-color: #333;         /* Taustaväri */
+  color: #ffffff5e;                /* Tekstiväri */
+  padding: 10px;                  /* Sisäiset marginaalit */
+  position: fixed;                /* Kiinnitetään näytön alareunaan */
+  bottom: 0;                      /* Kiinnitetään näytön alareunaan */
+  width: 100%;                    /* Elementin leveys 100% näytöstä */
 }
 
-
+/* Keskitetyn osan tyyli */
 .keskitetty {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1; /* Tämä kasvattaa keskitettyä osaa täyttämään käytettävissä olevan tilan */
+  display: flex;                  /* Käytetään flexbox-mallia */
+  align-items: center;            /* Keskitetään vaakasuunnassa */
+  justify-content: center;        /* Keskitetään pystysuunnassa */
+  flex-grow: 1;                   /* Joustava kasvu */
 }
 
+/* Keskitetty osa */
 .center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  border: 2px solid black;
+  display: flex;                  /* Käytetään flexbox-mallia */
+  justify-content: center;        /* Keskitetään pystysuunnassa */
+  align-items: center;            /* Keskitetään vaakasuunnassa */
+  height: 200px;                  /* Korkeus */
+  border: 2px solid black;        /* Reunaviiva */
 }
 
+/* Otsikkolaatikon tyyli */
 .otsikko {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #ffc000;
-  margin-top: 20px;
-  width: auto;
-  border-radius: 5px;
-  margin-left: 30%;
-  margin-right: 30%;
-
+  display: flex;                  /* Käytetään flexbox-mallia */
+  justify-content: center;        /* Keskitetään pystysuunnassa */
+  align-items: center;            /* Keskitetään vaakasuunnassa */
+  height: auto;                   /* Korkeus */
+  padding-top: 10px;              /* Ylämarginaali */
+  padding-bottom: 10px;           /* Alamarginaali */
+  background-color: #ffc000;      /* Taustaväri */
+  margin-top: 20px;               /* Ylämarginaali */
+  width: auto;                    /* Maksimileveys */
+  border-radius: 5px;             /* Pyöristetyt kulmat */
+  margin-left: 30%;               /* Vasen marginaali */
+  margin-right: 30%;              /* Oikea marginaali */
 }
 
+/* Laatikkojen sisältämän sisällön tyyli */
 .laatikko-container {
-  display: flex;
-  flex-wrap: wrap; /* Tämä antaa laatikoille mahdollisuuden siirtyä seuraavalle riville, kun tarpeen */
+  display: flex;                  /* Käytetään flexbox-mallia */
+  flex-wrap: wrap;                /* Kääritään riville tarvittaessa */
 }
 
+/* Yleinen laatikon tyyli */
 .laatikko {
-  flex: 1; /* Tämä tekee laatikosta joustavan, jotta se täyttää käytettävissä olevan tilan tasaisesti */
-  margin-bottom: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 100px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  text-align: center;
-  
-}
-@media (min-width: 1100px){
-.kuvalaatikko {
-  max-width: 350px;
-}
+  flex: 1;                        /* Joustava leveys */
+  margin-bottom: 20px;            /* Alamarginaali */
+  margin-left: 30px;              /* Vasen marginaali */
+  margin-right: 30px;             /* Oikea marginaali */
+  margin-top: 100px;              /* Ylämarginaali */
+  padding: 20px;                  /* Sisäiset marginaalit */
+  border: 1px solid #ccc;         /* Reunaviiva */
+  text-align: center;             /* Keskitetään teksti */
 }
 
+/* Media query näytön leveyden ollessa vähintään 1100px */
+@media (min-width: 1100px) {
+  .kuvalaatikko {
+    max-width: 350px;             /* Maksimileveys */
+  }
+}
+
+/* Media query näytön leveyden ollessa enintään 1100px */
 @media (max-width: 1100px) {
   .laatikko {
-      flex: 100%; /* Koko leveys pystyasennossa */
-      margin-top: 20px;
+    flex: 100%;                   /* Koko leveys pystyasennossa */
+    margin-top: 20px;             /* Ylämarginaali */
   }
-  ul.valikko:not(.logo){
-    flex-direction: column; /* muutetaan suuntaa listauksen suuntaa näytönkoon ollessa alle 1100px */
-
+  ul.valikko:not(.logo) {
+    flex-direction: column;       /* Muutetaan listan suuntaa koon ollessa alle 1100px */
   }
-  .kuvalaatikko{
-    flex: 100%;
-    width: 100%;
+  .kuvalaatikko {
+    flex: 100%;                   /* Koko leveys pystyasennossa */
+    width: 100%;                  /* Maksimileveys */
   }
 }
+
+/* Media query näytön leveyden ollessa enintään 750px */
 @media (max-width: 750px) {
   .kuvalaatikko {
-    width: 100%; /* Täyttää käytettävissä olevan tilan vaakasuunnassa */
-    margin-left: auto; /* Automaattinen vasemman reunan etäisyys */
-    margin-right: auto; /* Automaattinen oikean reunan etäisyys */
+    width: 100%;                  /* Täyttää käytettävissä olevan tilan vaakasuunnassa */
+    margin-left: auto;            /* Automaattinen vasemman reunan etäisyys */
+    margin-right: auto;           /* Automaattinen oikean reunan etäisyys */
   }
 
+  /* Kuvalaatikon sisällön tyyli pienellä näytöllä */
   .kuvalaatikko img {
-    max-width: 100%; /* Kuva täyttää laatikon leveyden */
-    height: auto; /* Säilytä kuvasuhde */
+    max-width: 100%;              /* Kuva täyttää laatikon leveyden */
+    height: auto;                 /* Säilytä kuvasuhde */
   }
 }
 
-
-
-a.btn{
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 4;
-  font-size: 18px;
-  font-weight: bold;
-  background: #ffc000;
-  width: 160px;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color:#28282f;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  -webkit-transform-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform;
+/* Tyyli napille */
+a.btn {
+  font-family: Arial, Helvetica, sans-serif; /* Aseta fontti */
+  line-height: 4;                 /* Aseta riviväli */
+  font-size: 18px;                /* Aseta fonttikoko */
+  font-weight: bold;              /* Aseta fontin paksuus */
+  background: #ffc000;            /* Taustaväri */
+  width: 160px;                   /* Leveys */
+  padding: 20px;                  /* Sisäiset marginaalit */
+  text-align: center;             /* Keskitä teksti vaakasuunnassa */
+  text-decoration: none;          /* Poista alleviivaukset */
+  text-transform: uppercase;      /* Muuta teksti isoin kirjaimin */
+  color: #28282f;                 /* Tekstiväri */
+  border-radius: 10px;            /* Pyöristetyt kulmat */
+  cursor: pointer;                /* Osoitinkäden osoitin */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Lisää varjostus */
+  -webkit-transform-duration: 0.3s; /* Safari-yhteensopivuus: transformaation kesto */
+  transition-duration: 0.3s;      /* Transformaation kesto */
+  -webkit-transition-property: box-shadow, transform; /* Safari-yhteensopivuus: varjostuksen ja transformaation ominaisuudet */
+  transition-property: box-shadow, transform;         /* Varjostuksen ja transformaation ominaisuudet */
 }
-.btn:hover, .btn:focus, .btn:active{
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
 
+/* Napin hover-tila, focus-tila ja aktiivinen tila */
+.btn:hover,
+.btn:focus,
+.btn:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Lisää varjostus hover-tilassa */
+  -webkit-transform: scale(1.05);         /* Kasvata kokoa */
+  transform: scale(1.05);                 /* Kasvata kokoa */
 }
-.pic{
-  display: flex;
-  flex-wrap: wrap;
-  margin:auto;
-  justify-content: center;
-  align-items: center;
 
-
-
+/* Kuvan laatikon tyyli */
+.pic {
+  display: flex;                  /* Käytetään flexbox-mallia */
+  flex-wrap: wrap;                /* Kääritään riville tarvittaessa */
+  margin: auto;                   /* Keskitä elementti vaakasuunnassa */
+  justify-content: center;        /* Keskitetään pystysuunnassa */
+  align-items: center;            /* Keskitetään vaakasuunnassa */
 }
+
+/* Yleinen kuvan laatikon tyyli */
 .kuvalaatikko {
-  flex: 1; /* Tämä tekee laatikosta joustavan, jotta se täyttää käytettävissä olevan tilan tasaisesti */
-  margin-bottom: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 100px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  text-align: center;
-  
+  flex: 1;                        /* Joustava leveys */
+  margin-bottom: 20px;            /* Alamarginaali */
+  margin-left: 30px;              /* Vasen marginaali */
+  margin-right: 30px;             /* Oikea marginaali */
+  margin-top: 100px;              /* Ylämarginaali */
+  padding: 20px;                  /* Sisäiset marginaalit */
+  border: 1px solid #ccc;         /* Reunaviiva */
+  text-align: center;             /* Keskitetään teksti */
 }
 
-.kuvalaatikko a.btn{
-  line-height: 7;
-
+/* Napin tyyli kuvan laatikossa */
+.kuvalaatikko a.btn {
+  line-height: 7;                 /* Aseta riviväli */
 }
