@@ -156,6 +156,11 @@ footer {
   text-align: center;
   
 }
+@media (min-width: 1100px){
+.kuvalaatikko {
+  max-width: 350px;
+}
+}
 
 @media (max-width: 1100px) {
   .laatikko {
@@ -166,7 +171,25 @@ footer {
     flex-direction: column; /* muutetaan suuntaa listauksen suuntaa näytönkoon ollessa alle 1100px */
 
   }
+  .kuvalaatikko{
+    flex: 100%;
+    width: 100%;
+  }
 }
+@media (max-width: 750px) {
+  .kuvalaatikko {
+    width: 100%; /* Täyttää käytettävissä olevan tilan vaakasuunnassa */
+    margin-left: auto; /* Automaattinen vasemman reunan etäisyys */
+    margin-right: auto; /* Automaattinen oikean reunan etäisyys */
+  }
+
+  .kuvalaatikko img {
+    max-width: 100%; /* Kuva täyttää laatikon leveyden */
+    height: auto; /* Säilytä kuvasuhde */
+  }
+}
+
+
 
 a.btn{
   font-family: Arial, Helvetica, sans-serif;
@@ -198,7 +221,8 @@ a.btn{
   display: flex;
   flex-wrap: wrap;
   margin:auto;
-  padding: 10% 10%;
+  justify-content: center;
+  align-items: center;
 
 
 
@@ -212,8 +236,10 @@ a.btn{
   padding: 20px;
   border: 1px solid #ccc;
   text-align: center;
+  
 }
 
 .kuvalaatikko a.btn{
   line-height: 7;
+
 }
